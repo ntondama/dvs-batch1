@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    enviroment{
+    JAVA_PATH="/opt/bin/java17"
+}
     stages{
         stage("working with variables"){
             steps{
@@ -7,6 +10,7 @@ pipeline{
                     batchno= 1
                     topic= "defining a variable in jenkins"
                     println "my batch no is ${batchno}, topic is ${topic}"
+                    println "my java is ${env.JAVA_PATH}"
                 }
             }
         }
