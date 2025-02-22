@@ -1,11 +1,13 @@
 pipeline{
     agent any
     stages{
-        stage("Welcome to jenkins"){
+        stage("working with variables"){
             steps{
                 script{
-                    println "Hi everyone, Welcome to jenkins"
-                    }
+                    batchno= 1
+                    topic= "defining a variable in jenkins"
+                    println "my batch no is ${batchno}, topic is ${topic}"
+                }
             }
         }
     }
