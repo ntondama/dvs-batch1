@@ -13,6 +13,7 @@ pipeline{
                 j=10
                 while(j<=20){
                     println "my j value is ${j}"
+                    j=j+1
                 }
             }
         }
