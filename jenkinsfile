@@ -3,6 +3,10 @@ pipeline{
     environment{
     JAVA_PATH="/opt/bin/java17"
 }
+parameters {
+  choice choices: ['dev', 'sit', 'pt', 'prod'], description: 'provide env', name: 'ENV'
+  string defaultValue: '0.0.0', description: 'provide the version', name: 'version', trim: true
+}
     stages{
         stage("working with variables"){
             steps{
