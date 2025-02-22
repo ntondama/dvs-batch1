@@ -1,6 +1,6 @@
 def myfn(a,b){
-    sum = a + b
-    println "sum of a and b is $(sum)"
+    sum = a+b
+    println "sum of a and b is ${sum}"
 }
 pipeline{
     agent any
