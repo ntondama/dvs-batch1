@@ -15,6 +15,7 @@ parameters {
                     topic= "defining a variable in jenkins"
                     println "my batch no is ${batchno}, topic is ${topic}"
                     println "my java is ${env.JAVA_PATH}"
+                    println "my env is ${params.ENV},my version is ${params.version}"
                 }
             }
         }
