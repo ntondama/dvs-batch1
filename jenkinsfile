@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("working with loops"){
             script{
-                for (sub in{"aws","azure","devops","git"}){
+                for (sub in["aws","azure","devops","git"]){
                     println "I learned subjects like ${sub}"
                 }
                 for (i=1;i<=5,i++){
