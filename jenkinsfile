@@ -1,0 +1,12 @@
+pipeline{
+    agent any/kubernets/docker/slave1
+    stages{
+        stage("Welcome to jenkins"){
+            steps{
+                script{
+                    println "Hi everyone, Welcome to jenkins"
+                    }
+            }
+        }
+    }
+}
