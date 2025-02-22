@@ -1,21 +1,17 @@
 pipeline{
     agent any
-    environment{
-    JAVA_PATH="/opt/bin/java17"
-}
-parameters {
-  choice choices: ['dev', 'sit', 'pt', 'prod'], description: 'provide env', name: 'ENV'
-  string defaultValue: '0.0.0', description: 'provide the version', name: 'version', trim: true
-}
     stages{
-        stage("working with variables"){
-            steps{
-                script{
-                    batchno= 1
-                    topic= "defining a variable in jenkins"
-                    println "my batch no is ${batchno}, topic is ${topic}"
-                    println "my java is ${env.JAVA_PATH}"
-                    println "my env is ${params.ENV},my version is ${params.version}"
+        stage("working with loops"){
+            script{
+                for (sub in{"aws","azure","devops","git"}){
+                    println "I learned subjects like ${sub}"
+                }
+                for (i=1;i<=5,i++){
+                    println "my i value is ${i}"
+                }
+                j=10
+                while(j<=20){
+                    println "my j value is ${j}"
                 }
             }
         }
