@@ -1,24 +1,18 @@
 pipeline{
     agent any
     stages{
-        stage("working with loops"){
+        stage("working with condition"){
             steps{
             script{
-                for (sub in["aws","azure","devops","git"]){
-                    println "I learned subjects like ${sub}"
+                i=20
+                if (i==2){
+                    println "value is same"
                 }
-                for (i=1;i<=5;i++){
-                    println "my i value is ${i}"
+                else{
+                    println "value miss match"
                 }
-                j=10
-                while(j<=20){
-                    println "my j value is ${j}"
-                    j=j+1
-                }
+            }
             }
         }
     }
 }
-
-}
-
